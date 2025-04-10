@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VietNamHub | Web chùa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="main.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <main>
+  <div class="hamburger"><i class="fas fa-bars"></i></div>
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="logo"><div class="logo">
+        <img src="/images/logo.png  " alt="Logo" />
+      </div>
+      </div>
+      <ul class="nav-links">
+        <li class="has-dropdown">
+          <a href="#">Nhà</a>
+        </li>
+          <li class="has-dropdown">
+            <a>News</a>
+          <ul class="dropdown">
+            <li><a href="https://www.vnexpress.net" target="#">VnExpress</a></li>
+            <li><a href="https://www.baomoi.com" target="#">Báo Mới</a></li>
+            <li><a href="https://www.thanhnien.vn" target="#">Báo Thanh Niên</a></li>
+            <li><a href="https://www.dantri.com.vn" target="#">Báo Dân Trí</a></li>
+            <li><a href="https://www.facebook.com/walter.davis.77920526" target="#">Báo Đời</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a>Khám Phá</a>
+        <ul class="dropdown">
+          <li><a href="#">Đà Nẵng</a></li>
+          <li><a href="#">Nha Trang</a></li>
+          <li><a href="#">Thanh Hóa</a></li>
+          <li><a href="#">Phú Yên</a></li>
+          <li><a >Cà Mau</a></li>
+        </ul>
+      </li>
+        <li class="has-dropdown">
+        <a>Trai Đẹp</a>
+        <ul class="dropdown">
+          <li><a href="#">Nguyễn</a></li>
+          <li><a href="#">Bão</a></li>
+          <li><a href="#">Hiếu</a></li>
+        </ul>
+        </li>
+      </ul>
+    </div>
+    <div  class="nav-right">
+      <a href="https://www.facebook.com/bhius" target="#"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.youtube.com/@hieubao6501" target="#"><i class="fa fa-youtube-play"></i></a>
+      <a href="https://www.instagram.com/_hiubris/  " target="#"><i class="fa fa-instagram"></i></a>
+      <a href="mailto:lietphong691@gmail.com" target="#"><i class="fa fa-envelope"></i></a>
+    </div>
+    
+  </nav>
+  <header class="hero">
+    <video autoplay muted loop class="hero-video">
+      <source src="https://cdn.pixabay.com/video/2023/09/01/178732-860527368_large.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <h1><span>Du lịch Việt Nam</span></h1>
+      <p>“Việt Nam – Vẻ đẹp bất tận”</p>
+        <form class="search-container" action="search.html" method="GET" autocomplete="off">
+        <div class="search-box">
+          <input type="text" id="search-input" name="destination" placeholder="Bạn muốn đi đâu?" />
+          <div class="suggestions" id="suggestions"></div>
+        </div>
+        <div class="search-options">
+          <div class="option date-wrapper">
+            <i class="fa fa-calendar"></i>
+            <div class="date-field">
+              <input type="date" id="departure-date" name="departure-date" placeholder="Ngày khởi hành" required />
+            </div>
+          </div>
+          <div class="departure-dropdown-wrapper">
+            <input type="text" id="departure-input" placeholder="Khởi hành từ..." autocomplete="off">
+            <div id="departure-suggestions" class="dropdown-suggestions"></div>
+          </div> 
+          <button type="submit" class="btn-find">Tìm</button>
+        </div>
+      </form>
+    </div>
+  </header>
+  <class class="programs-section">
+    <div class="intro">
+      <h2><div>Thiên Nhiên</div> những điều bí ẩn</h2>
+      <p>"Thiên nhiên Việt Nam ẩn chứa vẻ đẹp kỳ bí, nơi mây núi, rừng xanh và biển ngọc hòa quyện tạo nên bức tranh huyền ảo làm say lòng lữ khách."</p>
+      <button onclick="openMapModal()"> Chọn vị trí </button>
+    </div>
+
+    <div class="carousel">
+      <div class="card">
+        <img src="https://statics.vinpearl.com/b%C3%A1n%20%C4%91%E1%BA%A3o%20s%C6%A1n%20tr%C3%A0_1661247495.jpg" alt="Đà Nẵng">
+        <div class="overlay">
+          <h3>Đà Nẵng</h3>
+          <p>"Đà Nẵng – Thành phố của biển và núi"</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://statics.vinpearl.com/dao-phu-quoc_1661246610.jpg" alt="Phú Quốc">
+        <div class="overlay">
+          <h3>Phú Quốc</h3>
+          <p>"Phú Quốc – Nắng vàng, biển xanh, và giấc mơ."</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://statics.vinpearl.com/nha-trang-beaches-banner%20-%20Copy_1661247069.jpg" alt="Nha Trang">
+        <div class="overlay">
+          <h3>Nha Trang</h3>
+          <p>"Nha Trang – Nơi sóng hát bên nắng vàng."</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://statics.vinpearl.com/489_ngam_pu_luong_dep_nhe_nhang_mua_lua_chin_1661248244.jpg" alt="Thanh Hóa">
+        <div class="overlay">
+          <h3>Thanh Hóa</h3>
+          <p>"Hoa Thánh - Nơi ngôn từ được biến hóa"</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://statics.vinpearl.com/diem-du-lich-7_1689832279.jpg" alt="Phú Yên">
+        <div class="overlay">
+          <h3>Phú Yên</h3>
+          <p>"Phú Yên - xứ hoa vàng trên cỏ xanh"</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://statics.vinpearl.com/diem-du-lich-17_1689836240.jpg" alt="Cà Mau">
+        <div class="overlay">
+          <h3>Cà Mau</h3>
+          <p>"Cà Mau - Nơi tiếng muỗi át tiếng người"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="mapModal" class="modal" onclick="closeMap(event)">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeMap(event)">&times;</span>
+      <iframe src="webmap/index.html" frameborder="0"></iframe>
+    </div>
+  </div>
+  <section class="explore-section">
+    <div class="explore-container">
+      <div class="explore-text">
+        <h2>Địa điểm du lịch Đà Nẵng</h2>
+        <p class="anh11">Hãy sẵn sàng để ngỡ ngàng trước một Việt Nam mà bạn chưa bao giờ thấy, nơi hội tụ tinh hoa văn hóa kỳ thú của năm châu bốn biển.
+          <img src="https://vcdn1-dulich.vnecdn.net/2022/06/01/CauVangDaNang-1654082224-7229-1654082320.jpg?w=0&h=0&q=100&dpr=2&fit=crop&s=MeVMb72UZA27ivcyB3s7Kg">
+        </p>
+      </div>
+      <div class="explore-gallery">
+        <div class="explore-item large" style="background-image: url('https://www.vietnambooking.com/wp-content/uploads/2020/11/dia-diem-du-lich-da-nang-24112020-8.jpg');">
+          <div class="overlay">
+            <h3>Tín ngưỡng</h3>
+            <p>Nghỉ dưỡng biển</p>
+          </div>
+        </div>
+        <div class="explore-item" style="background-image: url('https://duonggiahotel.vn/wp-content/uploads/2023/11/dia-diem-du-lich-da-nang-avt.jpg');">
+          <div class="overlay">
+            <h3>Lễ Hội</h3>
+            <p>Nghỉ dưỡng & vui chơi</p>
+          </div>
+        </div>
+        <div class="explore-item" style="background-image: url('https://lethuytravel.com/uploaded/Anh-Cam-Nang/cn-dl-da-nang/danngsedienralehoiamthucquoc.jpg');">
+          <div class="overlay">
+            <h3>Ẩm Thực</h3>
+            <p>Nghỉ dưỡng & vui chơi</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="explore-section">
+    <div class="explore-container">
+      <div class="explore-text">
+      </div>
+      <div class="explore-gallery">
+      <div class="experience-card">
+        <img src="https://statics.vinpearl.com/hu%E1%BA%BF_1661248551.jpg" alt="">
+        <h3>Địa điểm du lịch Huế</h3>
+        <p>mang vẻ đẹp trầm mặc, mộng mơ cùng nhiều giá trị văn hóa, lịch sử lâu đời. Đến đây, bạn sẽ được chiêm ngưỡng những công trình kiến trúc độc đáo của lăng tẩm, Đại Nội Huế; tham quan các địa điểm du lịch nổi tiếng như cầu Tràng Tiền, núi Ngự Bình, đồi Vọng Cảnh, chùa Thiên Mụ...</p>
+      </div>     
+       <div class="experience-card">
+        <img>
+        <p>Đặc biệt, đừng bỏ lỡ cơ hội ngồi thuyền đi dạo sông Hương, thưởng trà, nghe nhã nhạc cung đình Huế, và thưởng thức nhiều món ngon đặc sắc đến từ ẩm thực cung đình và ẩm thực dân gian xứ Huế như chè, bánh bột lọc, bún bò, cơm hến,...
+        </p>
+        <img src="https://dulichviet.com.vn/images/bandidau/kham-pha-top-25-dia-diem-du-lich-thua-thien-hue-dep-quen-loi-ve.jpg   " alt="">
+        <a href="https://vnexpress.net/cam-nang-du-lich-hue-4126937.html">Khám phá →</a>
+      </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="explore-section">
+    <div class="explore-container">
+      <div class="explore-text">
+        <h2>Khám phá</h2>
+        <p class="anh11">Hãy sẵn sàng để ngỡ ngàng trước một Việt Nam mà bạn chưa bao giờ thấy, nơi hội tụ tinh hoa văn hóa kỳ thú của năm châu bốn biển.
+          <img src="https://static.vinwonders.com/2022/06/du-lich-mien-bac-thumb.jpg">
+        </p>
+      </div>
+      <div class="explore-gallery">
+        <div class="explore-item large" style="background-image: url('https://galatravel.vn/pic/destination/images/Tin%20Tuc/Mien-Bac/vinh-lan-ha.jpg');">
+          <div class="overlay">
+            <h3>Bắc</h3>
+            <p>Nghỉ dưỡng biển</p>
+          </div>
+        </div>
+        <div class="explore-item" style="background-image: url('https://vnpt.com.vn/Media/Images/25042024/tour-du-lich-mien-trung-nen-di-vao-thoi-gian-nao-la-dep-nhat-min.jpg');">
+          <div class="overlay">
+            <h3>Trung</h3>
+            <p>Nghỉ dưỡng & vui chơi</p>
+          </div>
+        </div>
+        <div class="explore-item" style="background-image: url('https://file.hstatic.net/1000184601/article/dia-diem-du-lich-mien-nam_340b0f9d5723483db226b570b75f7aaa.png');">
+          <div class="overlay">
+            <h3>Nam</h3>
+            <p>Nghỉ dưỡng & vui chơi</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="vinclub-hero">
+    <div class="vinclub-content">
+      <h4>VietNamHub</h4>
+      <h2>Bài Nộp Deadline Tin12</h2>
+      <p>...</p>
+      <a class="cta-button">ok →</a>
+    </div>
+  </section>
+</main>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <img class="footer-logo" />
+        <p>Thôn Cành Lá, Xã Cành Cây,<br> Tỉnh Trên Mây, Huyện Dưới Núi</p>
+        <p>✉️ lietphong691@gmail.com</p>
+        <p>📞 0876433952</p>
+      </div>
+      <div class="footer-col">
+        <h4>Về VietNamHub</h4>
+        <ul>
+          <li><a >Nguyễn Bão Hiếu</a></li>
+          <li><a >12T2</a></li>
+          <li><a >Đẹp Trai</a></li>
+          <li><a >Lạnh Lùng, Ngầu</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Điều khoản & Quy định</h4>
+        <ul>
+          <li><a href="https://policies.google.com/privacy?hl=vi" target="#">Chính sách bảo mật</a></li>
+          <li><a href="https://google.com/">Điều khoản thanh toán</a></li>
+          <li><a href="https://google.com/">Chính sách hoàn tiền</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Tin tức & Sự kiện</h4>
+        <ul>
+          <li><a href="https://google.com/">Tin công ty</a></li>
+          <li><a href="https://google.com/">Cẩm nang du lịch</a></li>
+          <li><a href="https://google.com/">Thành tựu</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 VietNamHub. All rights reserved.</p>
+    </div>
+  </footer>
+  
+</body>
+<script src="https://kit.fontawesome.com/your-kit-id.js"></script>
+</html>
